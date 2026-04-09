@@ -88,10 +88,10 @@ layers:
   - PgUp
   - $$mdi:arrow-up-bold$$
   - PgDn
-  - Ctl+Q
-  - LGUI
+  - Ctl+Alt+$$mdi:arrow-up-bold$$
   - LGUI
   - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - '0'

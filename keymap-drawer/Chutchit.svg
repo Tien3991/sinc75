@@ -736,7 +736,7 @@ rect.held, rect.combo.held {
 <g transform="translate(35, 339)" class="key keypos-87">
 <rect rx="6" ry="6" x="-33" y="-26" width="66" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-27" y="-24" width="54" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">Ctl+Q</text>
+<use href="#mdi:arrow-up-bold" xlink:href="#mdi:arrow-up-bold" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:arrow-up-bold"/>
 </g>
 <g transform="translate(109, 339)" class="key keypos-88">
 <rect rx="6" ry="6" x="-33" y="-26" width="66" height="52" class="key side"/>
@@ -746,12 +746,12 @@ rect.held, rect.combo.held {
 <g transform="translate(184, 339)" class="key keypos-89">
 <rect rx="6" ry="6" x="-33" y="-26" width="66" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-27" y="-24" width="54" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">LGUI</text>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:apple-keyboard-option"/>
 </g>
 <g transform="translate(258, 339)" class="key keypos-90">
 <rect rx="6" ry="6" x="-33" y="-26" width="66" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-27" y="-24" width="54" height="40" class="key"/>
-<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:apple-keyboard-option"/>
+<use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:apple-keyboard-control"/>
 </g>
 <g transform="translate(339, 339)" class="key keypos-91">
 <rect rx="6" ry="6" x="-40" y="-26" width="80" height="52" class="key side"/>
