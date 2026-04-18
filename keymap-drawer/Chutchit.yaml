@@ -14,7 +14,7 @@ layers:
   - F10
   - F11
   - F12
-  - $$mdi:printer-outline$$
+  - $$mdi:backspace-reverse-outline$$
   - HOME
   - {t: '`', s: '~'}
   - {t: '1', s: '!'}
@@ -29,7 +29,7 @@ layers:
   - {t: '0', s: )}
   - {t: '-', s: _}
   - {t: '=', s: +}
-  - {t: \, s: '|'}
+  - PRINTSCREEN
   - {t: '$$mdi:backspace$$', type: backspace}
   - PgUp
   - $$mdi:keyboard-tab$$
@@ -45,7 +45,7 @@ layers:
   - P
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
-  - $$mdi:backspace-reverse-outline$$
+  - {t: \, s: '|'}
   - PgDn
   - $$mdi:apple-keyboard-caps$$
   - A
@@ -92,11 +92,11 @@ layers:
   - PLAY PAUSE
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-up-bold$$
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - PLAY PAUSE
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   '1':
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
