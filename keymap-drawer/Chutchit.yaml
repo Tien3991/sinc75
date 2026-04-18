@@ -29,8 +29,8 @@ layers:
   - {t: '0', s: )}
   - {t: '-', s: _}
   - {t: '=', s: +}
-  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:backspace$$', type: backspace}
   - PgUp
   - $$mdi:keyboard-tab$$
   - Q
