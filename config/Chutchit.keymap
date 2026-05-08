@@ -121,18 +121,34 @@ As such, those are in use within the default layer at this time.*/
         };
     };
 
+    macros {
+        delete_line: delete_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(HOME) &kp D &kp E &kp L &kp BACKSPACE &kp BACKSPACE &kp BACKSPACE>;
+            label = "DELETE_LINE";
+        };
+
+        switch_lang: switch_lang {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(LS(GRAVE)))>;
+            label = "SWITCH_LANG";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp ESC    &kp F1    &kp F2            &kp F3    &kp F4     &kp F5     &kp F6            &kp F7         &kp F8     &kp F9     &kp F10         &kp F11       &kp F12           &kp PRINTSCREEN  &kp HOME
-&kp GRAVE  &kp N1    &kp N2            &kp N3    &kp N4     &kp N5     &kp N6   &kp N7   &kp N8         &kp N9     &kp N0     &kp MINUS       &kp EQUAL     &kp DELETE        &kp BACKSPACE    &kp PAGE_UP
-&kp TAB    &kp Q     &kp W             &kp E     &kp R      &kp T               &kp Y    &kp U          &kp I      &kp O      &kp P           &kp LBKT      &kp RBKT          &kp BACKSLASH    &kp PAGE_DOWN
-&kp CAPS   &kp A     &kp S             &kp D     &kp F      &kp G                        &kp H          &kp J      &kp K      &kp L           &kp SEMI      &kp SQT           &kp RET          &kp END
+&kp ESC    &kp F1    &kp F2            &kp F3    &kp F4     &kp F5     &kp F6            &kp F7         &kp F8     &kp F9     &kp F10         &kp F11       &kp F12           &sl 1           &kp HOME
+&kp GRAVE  &kp N1    &kp N2            &kp N3    &kp N4     &kp N5     &kp N6   &kp N7   &kp N8         &kp N9     &kp N0     &kp MINUS       &kp EQUAL     &kp DELETE        &kp BACKSPACE   &kp PAGE_UP
+&kp TAB    &kp Q     &kp W             &kp E     &kp R      &kp T               &kp Y    &kp U          &kp I      &kp O      &kp P           &kp LBKT      &kp RBKT          &kp BACKSLASH   &kp PAGE_DOWN
+&kp CAPS   &kp A     &kp S             &kp D     &kp F      &kp G                        &kp H          &kp J      &kp K      &kp L           &kp SEMI      &kp SQT           &kp RET         &kp END
 &kp LSHFT  &kp Z     &kp X             &kp C     &kp V      &kp B      &kp RET  &kp RET  &kp N          &kp M      &kp COMMA  &kp DOT         &kp FSLH      &kp RSHFT         &kp UP
-&kp LCTRL  &kp LGUI  &kp LALT                    &kp SPACE  &kp RCTRL                    &kp LA(ENTER)  &kp SPACE             &kp RIGHT_ALT                 &kp LEFT          &kp DOWN         &kp RIGHT
-&kp LEFT   &kp UP    &kp C_PLAY_PAUSE  &kp DOWN  &kp RIGHT                                                                    &mmv MOVE_LEFT  &mmv MOVE_UP  &kp C_PLAY_PAUSE  &mmv MOVE_DOWN   &mmv MOVE_RIGHT
+&kp LCTRL  &kp LGUI  &kp LALT                    &kp SPACE  &kp RCTRL                    &kp LA(ENTER)  &kp SPACE             &kp RIGHT_ALT                 &kp LEFT          &kp DOWN        &kp RIGHT
+&kp LEFT   &kp UP    &kp C_PLAY_PAUSE  &kp DOWN  &kp RIGHT                                                                    &mmv MOVE_LEFT  &mmv MOVE_UP  &kp C_PLAY_PAUSE  &mmv MOVE_DOWN  &mmv MOVE_RIGHT
             >;
 
             sensor-bindings = <&Scroll_RL>, <&Scroll_DU>;
@@ -140,13 +156,13 @@ As such, those are in use within the default layer at this time.*/
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans  &trans                  &trans  &trans          &trans          &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans
+&trans        &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans           &trans        &trans
+&trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PRINTSCREEN  &delete_line  &trans
+&trans        &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans        &trans
+&trans        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans           &trans        &trans
+&switch_lang  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans
+&trans        &trans  &trans          &trans  &trans                  &trans  &trans          &trans          &trans           &trans        &trans
+&trans        &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans           &trans        &trans
             >;
 
             sensor-bindings =
