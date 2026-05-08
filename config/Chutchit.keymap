@@ -156,13 +156,13 @@ As such, those are in use within the default layer at this time.*/
 
         layer_1 {
             bindings = <
-&trans        &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans           &trans        &trans
-&trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PRINTSCREEN  &delete_line  &trans
-&trans        &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans        &trans
-&trans        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans           &trans        &trans
-&switch_lang  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans
-&trans        &trans  &trans          &trans  &trans                  &trans  &trans          &trans          &trans           &trans        &trans
-&trans        &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans           &trans        &trans
+&trans  &trans        &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans
+&trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PRINTSCREEN  &trans  &trans
+&trans  &trans        &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans
+&trans  &delete_line  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans
+&trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans
+&trans  &trans        &trans          &trans  &trans                  &trans  &trans          &trans          &trans           &trans  &trans
+&trans  &trans        &trans  &trans  &trans                                                  &trans  &trans  &trans           &trans  &trans
             >;
 
             sensor-bindings =
