@@ -119,6 +119,18 @@ As such, those are in use within the default layer at this time.*/
             key-positions = <32 33>;
             layers = <0>;
         };
+
+        layer_linux {
+            bindings = <&none>;
+            key-positions = <75 76 77 60 16>;
+            layers = <0>;
+        };
+
+        layer_mac {
+            bindings = <&none>;
+            key-positions = <75 76 77 60 17>;
+            layers = <2>;
+        };
     };
 
     macros {
@@ -140,7 +152,7 @@ As such, those are in use within the default layer at this time.*/
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        layer_linux {
             bindings = <
 &kp ESC    &kp F1    &kp F2            &kp F3    &kp F4     &kp F5     &kp F6            &kp F7         &kp F8     &kp F9     &kp F10         &kp F11       &kp F12           &sl 1           &kp HOME
 &kp GRAVE  &kp N1    &kp N2            &kp N3    &kp N4     &kp N5     &kp N6   &kp N7   &kp N8         &kp N9     &kp N0     &kp MINUS       &kp EQUAL     &kp DELETE        &kp BACKSPACE   &kp PAGE_UP
@@ -170,44 +182,18 @@ As such, those are in use within the default layer at this time.*/
                 <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
-        layer_2 {
+        layer_mac {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans  &trans                  &trans  &trans          &trans          &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans
+&kp ESC    &kp F1        &kp F2            &kp F3    &kp F4     &kp F5            &kp F6            &kp F7         &kp F8     &kp F9     &kp F10         &kp F11       &kp F12           &sl 1           &kp HOME
+&kp GRAVE  &kp N1        &kp N2            &kp N3    &kp N4     &kp N5            &kp N6   &kp N7   &kp N8         &kp N9     &kp N0     &kp MINUS       &kp EQUAL     &kp DELETE        &kp BACKSPACE   &kp PAGE_UP
+&kp TAB    &kp Q         &kp W             &kp E     &kp R      &kp T                      &kp Y    &kp U          &kp I      &kp O      &kp P           &kp LBKT      &kp RBKT          &kp BACKSLASH   &kp PAGE_DOWN
+&kp CAPS   &kp A         &kp S             &kp D     &kp F      &kp G                               &kp H          &kp J      &kp K      &kp L           &kp SEMI      &kp SQT           &kp RET         &kp END
+&kp LSHFT  &kp Z         &kp X             &kp C     &kp V      &kp B             &kp RET  &kp RET  &kp N          &kp M      &kp COMMA  &kp DOT         &kp FSLH      &kp RSHFT         &kp UP
+&kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND            &kp SPACE  &kp LEFT_COMMAND                    &kp LA(ENTER)  &kp SPACE             &kp RIGHT_ALT                 &kp LEFT          &kp DOWN        &kp RIGHT
+&kp LEFT   &kp UP        &kp C_PLAY_PAUSE  &kp DOWN  &kp RIGHT                                                                           &mmv MOVE_LEFT  &mmv MOVE_UP  &kp C_PLAY_PAUSE  &mmv MOVE_DOWN  &mmv MOVE_RIGHT
             >;
 
-            sensor-bindings = <&Scroll_DU>, <&Scroll_UD>;
-        };
-
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans  &trans                  &trans  &trans          &trans          &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans
-            >;
-
-            sensor-bindings = <&Scroll_DU>, <&Scroll_UD>;
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans  &trans                  &trans  &trans          &trans          &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans
-            >;
+            sensor-bindings = <&Scroll_RL>, <&Scroll_DU>;
         };
     };
 };
