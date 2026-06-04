@@ -123,13 +123,11 @@ As such, those are in use within the default layer at this time.*/
         layer_linux {
             bindings = <&to 0>;
             key-positions = <60 36 55>;
-            layers = <2>;
         };
 
         layer_mac {
             bindings = <&to 2>;
             key-positions = <36 69 60>;
-            layers = <0>;
         };
     };
 
