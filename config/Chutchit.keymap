@@ -121,15 +121,15 @@ As such, those are in use within the default layer at this time.*/
         };
 
         layer_linux {
-            bindings = <&none>;
-            key-positions = <75 76 77 60 16>;
-            layers = <0>;
+            bindings = <&to 0>;
+            key-positions = <60 36 55>;
+            layers = <2>;
         };
 
         layer_mac {
-            bindings = <&none>;
-            key-positions = <75 76 77 60 17>;
-            layers = <2>;
+            bindings = <&to 2>;
+            key-positions = <36 69 60>;
+            layers = <0>;
         };
     };
 
