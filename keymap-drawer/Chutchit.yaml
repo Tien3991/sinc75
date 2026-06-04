@@ -301,9 +301,9 @@ combos:
 - p: [32, 33]
   k: )
   l: [linux]
-- p: [75, 76, 77, 60, 16]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
-  l: [linux]
-- p: [75, 76, 77, 60, 17]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
+- p: [60, 36, 55]
+  k: {t: linux, h: toggle}
   l: [mac]
+- p: [36, 69, 60]
+  k: {t: mac, h: toggle}
+  l: [linux]
